@@ -1,7 +1,6 @@
 package com.example;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 import javax.enterprise.inject.Model;
@@ -10,6 +9,7 @@ import javax.inject.Inject;
 import com.example.dto.UserDTO;
 import com.example.services.UserService;
 
+// http://localhost:8080/jakartaee8-starter/index.xhtml
 @Model
 public class UserBean {
 
@@ -19,19 +19,14 @@ public class UserBean {
 	private String firstName = "";
 	private String lastName = "";
 
-//	public UserDTO getUser() {
-//		return this.user;
-//	}
-
-//	public void setUser(UserDTO user) {
-//		this.user = user;
-//	}
-
 	public void add() {
 		this.userService.saveUser(new UserDTO(null, this.firstName, this.lastName, LocalDate.now(), null));
 		this.firstName = "";
 		this.lastName = "";
 	}
+
+	// implicit getter/setter declarations since lombok annotations don't work that
+	// well for xhmtl calls
 
 	public String getFirstName() {
 		return this.firstName;
