@@ -1,0 +1,4 @@
+# Created at 2021-07-15T15:27:20.464
+Boot Manifest-JAR contains absolute paths in classpath 'G:\apps\jakarta-starter\jakartaee8-starter\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

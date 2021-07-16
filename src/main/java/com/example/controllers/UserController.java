@@ -1,6 +1,7 @@
 package com.example.controllers;
 
-import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -19,10 +20,11 @@ import com.example.services.UserService;
 @Path(UserController.ROOT_PATH)
 @RequestScoped
 @Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class UserController {
 
 	protected static final String ROOT_PATH = "user-controller"; // NOSONAR
-	
+
 	protected static final String PARAM_ID = "id";
 	protected static final String PARAM_FIRST_NAME = "firstName";
 	protected static final String PARAM_LAST_NAME = "lastName";
@@ -47,18 +49,19 @@ public class UserController {
 	@Path("user-by-name")
 	public Response getUserByName(@PathParam(PARAM_FIRST_NAME) String firstName,
 			@PathParam(PARAM_LAST_NAME) String lastName) {
-		return Response.ok(this.userService.getUserByName(firstName, lastName)).build();
+		return Response.ok(this.userService.getUsersByName(firstName, lastName)).build();
 	}
 
 	@GET
 	@Path("user-born-before")
-	public Response getUsersBornBefore(@PathParam(PARAM_DATE) LocalDate date) {
-		return Response.ok(this.userService.getUsersBornBefore(date)).build();
+	public Response getUsersBornBefore(@PathParam(PARAM_DATE) Date date) {
+		return Response
+				.ok(this.userService.getUsersBornBefore(date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()))
+				.build();
 	}
 
 	@POST
 	@Path("save-user")
-	@Consumes(MediaType.APPLICATION_JSON)
 	public Response saveUser(UserDTO to) {
 		return Response.ok(this.userService.saveUser(to)).build();
 	}

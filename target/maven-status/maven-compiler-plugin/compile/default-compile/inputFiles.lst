@@ -1,0 +1,15 @@
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\dao\entities\User.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\services\UserServiceImpl.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\dto\transformers\UserDTOTransformer.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\dao\UserDAO.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\configuration\SwaggerJaxrsConfig.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\configuration\FacesConfigurationBean.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\dto\UserDTO.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\UserBean.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\JaxrsActivator.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\services\UserService.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\utils\CustomDateUtils.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\configuration\ApiOriginFilter.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\controllers\UserController.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\dao\SampleDataGenerator.java
+G:\apps\jakarta-starter\jakartaee8-starter\src\main\java\com\example\dao\entities\transformers\UserTransformer.java

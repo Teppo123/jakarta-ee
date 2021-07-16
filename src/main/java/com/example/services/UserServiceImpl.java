@@ -61,9 +61,10 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<UserDTO> getUsersBornBefore(LocalDate date) {
-		// TODO
-		return Lists.newArrayList(MOCK_USER_1, MOCK_USER_2);
+	public List<UserDTO> getUsersBornBefore(LocalDate localDate) {
+		LOGGER.info("getUsersBornBefore, localDate = {}", localDate);
+		return this.userDao.findUsersBornBefore(localDate).stream().map(new UserDTOTransformer()::transform)
+				.collect(Collectors.toList());
 	}
 
 	@Override

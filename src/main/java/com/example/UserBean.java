@@ -9,8 +9,10 @@ import javax.inject.Inject;
 import com.example.dto.UserDTO;
 import com.example.services.UserService;
 
-// http://localhost:8080/jakartaee8-starter/index.xhtml
+import lombok.Data;
+
 @Model
+@Data
 public class UserBean {
 
 	@Inject
@@ -28,28 +30,28 @@ public class UserBean {
 	// implicit getter/setter declarations since lombok annotations don't work that
 	// well for xhmtl calls
 
-	public String getFirstName() {
-		return this.firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return this.lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public List<UserDTO> getUsers() {
-		return this.userService.getUsers();
-	}
-
-	public void deleteUser(Long id) {
-		this.userService.deleteUserById(id);
-	}
+//	public String getFirstName() {
+//		return this.firstName;
+//	}
+//
+//	public void setFirstName(String firstName) {
+//		this.firstName = firstName;
+//	}
+//
+//	public String getLastName() {
+//		return this.lastName;
+//	}
+//
+//	public void setLastName(String lastName) {
+//		this.lastName = lastName;
+//	}
+//
+//	public List<UserDTO> getUsers() {
+//		return this.userService.getUsers();
+//	}
+//
+//	public void deleteUser(Long id) {
+//		this.userService.deleteUserById(id);
+//	}
 
 }
